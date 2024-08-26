@@ -1,0 +1,7 @@
+extends ./layouts/mainlayout.pug
+
+block main 
+    ul 
+        each item in products
+            li #{item.title}
+    

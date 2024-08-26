@@ -1,0 +1,13 @@
+học đến video 18
+
+Sử dụng i Nodemon để theo dõi file và update file đỡ phải tắt đi bật laij
+ npm i nodemon
+ add thêm :
+    "start": "nodemon --inspect index.js" vào  mục script trong file !!package.json
+!!!lưu ý: sau khi deploy hãy uninstall nodemon 
+    cách đơn giản: npm i --save-dev nodemon ( nó chỉ được lưu môi trường dev) devploy sẽ tự xóa
+Ngày 25/8 mới ôn lại pug c
+    cách dùng var  
+    cách tạo template
+    cách nhúng file pug 
+    cách dùng mixin 

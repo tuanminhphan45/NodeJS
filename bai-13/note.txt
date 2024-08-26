@@ -1,0 +1,18 @@
+- sessionStorage kho lưu trữ theo phiên 
+    có nghĩa là trình duyệt tắt thì sẽ mất dữ liệu 
+
+- có 5 phương thức 
+    sessionStorage.clearsetItem()
+    sessionStorage.cleargetItem()
+    sessionStorage.clearremoveItem()
+    sessionStorage.clear();
+    sessionStorage.key()
+
+- so sánh localStorage và sessionStorage và cookies
+    cookies hết hạn khí tắt trình duyệt hoặc đặt tgian hết hạn
+    localStorage vô thời hạn 
+    sessionStorage khi tắt trình duyệt 
+- nơi lưu trữ 
+    cookies lưu được ở server side và client
+    localStorage và sessionStorage lưu ở client
+-Closure(bao đóng)
