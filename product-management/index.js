@@ -1,8 +1,9 @@
 const express = require("express");
 const router = require("./routes/client/index.route");
+require("dotenv").config
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 // cấu hình pug vào dự án
 app.set("views", "./views");

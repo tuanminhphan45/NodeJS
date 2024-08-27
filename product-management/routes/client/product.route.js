@@ -1,8 +1,8 @@
 // nhúng thư viện express để dùng tính năng Router
 const express = require("express");
 const router = express.Router();
-const controller = require("../../controllers/client/product.controller");
-const {index, create} = controller
+const controller = require("../../controllers/client/products.controller.js");
+const { index, create } = controller;
 /*
     chỉ cần khai báo / là trang chủ 
     /create là products/create
@@ -11,6 +11,6 @@ const {index, create} = controller
 */
 router.get("/", index);
 
-router.get("/create", create );
+router.get("/create", create);
 
 module.exports = router;
