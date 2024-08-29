@@ -1,5 +1,7 @@
 const express = require("express");
 
+const systemConfig = require("./config/system.js");
+
 // cấu hình file .env để dùng được biến
 require("dotenv").config();
 
@@ -18,6 +20,9 @@ database.connect(process.env.MONGO_URL);
 // cấu hình pug vào dự án
 app.set("views", "./views");
 app.set("view engine", "pug");
+
+// cách dùng biến vào file pug
+app.locals.prefixAdmin = systemConfig.prefixAdmin;
 
 // cấu hình file tĩnh css/images
 app.use(express.static("public"));
