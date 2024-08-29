@@ -9,7 +9,7 @@ const port = process.env.PORT;
 
 // cấu hình routing
 const router = require("./routes/client/index.route");
-router(app);
+const routerAdmin = require("./routes/admin/index.route");
 
 // cấu hình kết nối database
 const database = require("./config/database.js");
@@ -21,6 +21,8 @@ app.set("view engine", "pug");
 
 // cấu hình file tĩnh css/images
 app.use(express.static("public"));
+router(app);
+routerAdmin(app);
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
