@@ -3,6 +3,18 @@ extends ../../layouts/default.pug
 block main 
     h1 Danh sach san pham 
 
+    .card.mb-3  
+        .card-header Bộ Lọc và Tìm Kiếm 
+        .card-body
+            button(
+                class="btn btn-sm ml-1 btn-outline-success active"
+                button-status=""
+                ) Tất Cả
+            button(class="btn btn-sm ml-1 btn-outline-success"
+            button-status="active") Hoạt động
+            button(class="btn btn-sm ml-1 btn-outline-success"
+            button-status="inactive") Dừng hoạt động
+
     table.table.table-hover.table-sm 
         thead
             tr 
