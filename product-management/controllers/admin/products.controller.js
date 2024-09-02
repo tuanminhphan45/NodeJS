@@ -15,21 +15,20 @@ module.exports.products = async (req, res) => {
         {
             name: "Dừng hoạt động",
             status: "inactive",
-            
         },
     ];
     const find = {
         deleted: false,
     };
     if (req.query.status) {
-        const index = filterStatus.findIndex(item => item.status == req.query.status);
-        filterStatus.class = "active"
+        const index = filterStatus.findIndex(
+            (item) => item.status == req.query.status
+        );
+        filterStatus.class = "active";
         find.status = req.query.status;
-    }else{
-        const index = filterStatus.findIndex(item => item.status == "");
-        filterStatus.class = "active"
-        find.status = req.query.status;
-
+    } else {
+        const index = filterStatus.findIndex((item) => item.status == "");
+        filterStatus.class = "active";
     }
 
     const products = await Product.find(find);
