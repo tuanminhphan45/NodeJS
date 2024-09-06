@@ -15,15 +15,14 @@ if (buttonsStatus.length > 0) {
 }
 
 const formSearch = document.querySelectorAll("#form-search");
-if(formSearch){
-    formSearch.addEventListener("submit", (e) =>{
+if (formSearch) {
+    formSearch.addEventListener("submit", (e) => {
         e.prevenDefault();
         const keyWord = e.target.element.keyWord.value;
-        if(keyWord){
-            url.searchParams.set("keyword", keyword);
-        }else{
-            url.searchParams.remove("keyword")
+        if (keyWord) {
+            url.searchParams.set("keyword", keyWord);
+        } else {
+            url.searchParams.remove("keyword");
         }
-
-    })
+    });
 }

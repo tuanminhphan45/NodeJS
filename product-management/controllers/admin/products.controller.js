@@ -20,6 +20,12 @@ module.exports.products = async (req, res) => {
     const find = {
         deleted: false,
     };
+    const keyWord = "";
+    if (req.query.keyword) {
+        keyWord = req.query.keyword;
+        const regex = new RegExp(keyWord, i);
+        find.title = regex;
+    }
     if (req.query.status) {
         const index = filterStatus.findIndex(
             (item) => item.status == req.query.status
