@@ -1,10 +1,13 @@
+require("dotenv").config();
 // Init express
 const express = require("express");
 const app = express();
 
 const port = process.env.PORT;
 //Routes
+const routeAdmin = require("./routes/admin/index.route");
 const route = require("./routes/client/index.route");
+routeAdmin(app);
 route(app);
 
 //Set view engine
