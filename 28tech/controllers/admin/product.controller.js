@@ -2,7 +2,14 @@ const Product = require("../../models/product.model");
 
 module.exports.product = async (req, res) => {
     try {
-        const products = await Product.find();
+        let find = {
+            deleted: false
+        }
+        if (req.query.status) {
+            find.status = req.query.status;
+        }
+        
+        const products = await Product.find(find);
         res.render("admin/pages/product/index", {
             title: "Product Page",
             products: products,
