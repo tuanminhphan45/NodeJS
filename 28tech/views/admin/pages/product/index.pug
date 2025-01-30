@@ -6,18 +6,17 @@ block main
     .card.mb-3
         .card-header Bộ lọc và Tìm kiếm
             .card-body
-                button(
-                    class="btn btn-sm ml-1 btn-outline-success active"
-                    button-status=""
-                ) Tất cả
-                button(
-                    class="btn btn-sm ml-1 btn-outline-success"
-                    button-status="active"
-                ) Hoạt động
-                button(
-                    class="btn btn-sm ml-1 btn-outline-success"
-                    button-status="inactive"
-                ) Dừng hoạt động
+                .row 
+                    .col-6
+                        each item in filterStatus 
+                                button(class=`btn btn-outline-success ${item.class} ml-1 btn-sm`
+                                    button-status= item.status) #{item.name} 
+                    .col-6
+                        form(action="" id ="form-search")
+                            .input-group
+                                input(type="text" placeholder="Nhap tu khoa" class="form-control" name="keyword")
+                                .input-group-append
+                                    button(class="btn btn-success" type="submit") Tim
     .card.mb-3
         .card-header Bộ lọc và Tìm kiếm
             .card-body
