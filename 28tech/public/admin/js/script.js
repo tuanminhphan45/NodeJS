@@ -20,8 +20,9 @@ if (buttonStatus.length > 0) {
 const formSearch = document.querySelector("#form-search");
 if (formSearch) {
     formSearch.addEventListener("submit", (e) => {
+        console.log(ok);
         e.preventDefault();
-        const keyword = e.target.element.keyword.value;
+        const keyword = e.target.elements.keyword.value;
         if (keyword) {
             url.searchParams.set("keyword", keyword);
         } else {
