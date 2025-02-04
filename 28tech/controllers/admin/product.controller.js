@@ -14,11 +14,30 @@ module.exports.product = async (req, res) => {
     if (objectSearch.regex) {
         find.title = objectSearch.regex;
     }
-    const products = await Product.find(find);
+    // config pagination
+    let objectPagination = {
+        currentPage: 1,
+        limitItems: 4,
+    };
+    if (req.query.page) {
+        objectPagination.currentPage = parseInt(req.query.page);
+    }
+
+    const countProdcuts = await Product.countDocuments(find);
+    const totalPage = Math.ceil(countProdcuts / objectPagination.limitItems);
+    objectPagination.totalPage = totalPage;
+
+
+    objectPagination.skip =
+        (objectPagination.currentPage - 1) * objectPagination.limitItems;
+    const products = await Product.find(find)
+        .limit(objectPagination.limitItems)
+        .skip(objectPagination.skip);
     res.render("admin/pages/product/index", {
         title: "Product Page",
         products: products,
         filterStatus: filterStatus,
         keyword: objectSearch.keyword,
+        pagination: objectPagination,
     });
 };

@@ -31,3 +31,23 @@ if (formSearch) {
         window.location = url.href;
     });
 }
+
+// pagination
+const buttonPagination = document.querySelectorAll("[button-pagination]");
+console.log(buttonPagination);
+if (buttonPagination.length > 0) {
+    buttonPagination.forEach((button) => {
+        let url = new URL(window.location.href);
+        button.addEventListener("click", () => {
+            const page = button.getAttribute("button-pagination");
+            console.log(page);
+            if (page) {
+                url.searchParams.set("page", page);
+            } else {
+                url.searchParams.delete("page");
+            }
+            window.location.href = url.href;
+        });
+    });
+}
+// end pagination
