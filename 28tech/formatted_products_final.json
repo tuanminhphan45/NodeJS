@@ -1,0 +1,178 @@
+[
+    {
+        "title": "iPhone 5s",
+        "description": "The iPhone 5s is a classic smartphone known for its compact design and advanced features during its release. While it's an older model, it still provides a reliable user experience.",
+        "price": 199.99,
+        "discountPercentage": 11.85,
+        "stock": 65,
+        "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%205s/thumbnail.png",
+        "status": "active",
+        "position": 1,
+        "deleted": false
+    },
+    {
+        "title": "iPhone 6",
+        "description": "The iPhone 6 is a stylish and capable smartphone with a larger display and improved performance. It introduced new features and design elements, making it a popular choice in its time.",
+        "price": 299.99,
+        "discountPercentage": 4.54,
+        "stock": 99,
+        "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%206/thumbnail.png",
+        "status": "active",
+        "position": 2,
+        "deleted": false
+    },
+    {
+        "title": "iPhone 13 Pro",
+        "description": "The iPhone 13 Pro is a cutting-edge smartphone with a powerful camera system, high-performance chip, and stunning display. It offers advanced features for users who demand top-notch technology.",
+        "price": 1099.99,
+        "discountPercentage": 18.3,
+        "stock": 26,
+        "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%2013%20Pro/thumbnail.png",
+        "status": "inactive",
+        "position": 3,
+        "deleted": false
+    },
+    {
+        "title": "iPhone X",
+        "description": "The iPhone X is a flagship smartphone featuring a bezel-less OLED display, facial recognition technology (Face ID), and impressive performance. It represents a milestone in iPhone design and innovation.",
+        "price": 899.99,
+        "discountPercentage": 14.19,
+        "stock": 99,
+        "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%20X/thumbnail.png",
+        "status": "inactive",
+        "position": 4,
+        "deleted": false
+    },
+    {
+        "title": "Oppo A57",
+        "description": "The Oppo A57 is a mid-range smartphone known for its sleek design and capable features. It offers a balance of performance and affordability, making it a popular choice.",
+        "price": 249.99,
+        "discountPercentage": 12.17,
+        "stock": 76,
+        "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20A57/thumbnail.png",
+        "status": "inactive",
+        "position": 5,
+        "deleted": false
+    },
+    {
+        "title": "Oppo F19 Pro Plus",
+        "description": "The Oppo F19 Pro Plus is a feature-rich smartphone with a focus on camera capabilities. It boasts advanced photography features and a powerful performance for a premium user experience.",
+        "price": 399.99,
+        "discountPercentage": 15.62,
+        "stock": 92,
+        "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro%20Plus/thumbnail.png",
+        "status": "inactive",
+        "position": 6,
+        "deleted": false
+    },
+    {
+        "title": "Oppo K1",
+        "description": "The Oppo K1 series offers a range of smartphones with various features and specifications. Known for their stylish design and reliable performance, the Oppo K1 series caters to diverse user preferences.",
+        "price": 299.99,
+        "discountPercentage": 14.58,
+        "stock": 61,
+        "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20K1/thumbnail.png",
+        "status": "inactive",
+        "position": 7,
+        "deleted": false
+    },
+    {
+        "title": "Realme C35",
+        "description": "The Realme C35 is a budget-friendly smartphone with a focus on providing essential features for everyday use. It offers a reliable performance and user-friendly experience.",
+        "price": 149.99,
+        "discountPercentage": 16.47,
+        "stock": 81,
+        "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Realme%20C35/thumbnail.png",
+        "status": "inactive",
+        "position": 8,
+        "deleted": false
+    },
+    {
+        "title": "Realme X",
+        "description": "The Realme X is a mid-range smartphone known for its sleek design and impressive display. It offers a good balance of performance and camera capabilities for users seeking a quality device.",
+        "price": 299.99,
+        "discountPercentage": 2.39,
+        "stock": 87,
+        "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Realme%20X/thumbnail.png",
+        "status": "inactive",
+        "position": 9,
+        "deleted": false
+    },
+    {
+        "title": "Realme XT",
+        "description": "The Realme XT is a feature-rich smartphone with a focus on camera technology. It comes equipped with advanced camera sensors, delivering high-quality photos and videos for photography enthusiasts.",
+        "price": 349.99,
+        "discountPercentage": 3.03,
+        "stock": 53,
+        "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Realme%20XT/thumbnail.png",
+        "status": "active",
+        "position": 10,
+        "deleted": false
+    },
+    {
+        "title": "Samsung Galaxy S7",
+        "description": "The Samsung Galaxy S7 is a flagship smartphone known for its sleek design and advanced features. It features a high-resolution display, powerful camera, and robust performance.",
+        "price": 299.99,
+        "discountPercentage": 8.83,
+        "stock": 55,
+        "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Samsung%20Galaxy%20S7/thumbnail.png",
+        "status": "active",
+        "position": 11,
+        "deleted": false
+    },
+    {
+        "title": "Samsung Galaxy S8",
+        "description": "The Samsung Galaxy S8 is a premium smartphone with an Infinity Display, offering a stunning visual experience. It boasts advanced camera capabilities and cutting-edge technology.",
+        "price": 499.99,
+        "discountPercentage": 2.69,
+        "stock": 75,
+        "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Samsung%20Galaxy%20S8/thumbnail.png",
+        "status": "inactive",
+        "position": 12,
+        "deleted": false
+    },
+    {
+        "title": "Samsung Galaxy S10",
+        "description": "The Samsung Galaxy S10 is a flagship device featuring a dynamic AMOLED display, versatile camera system, and powerful performance. It represents innovation and excellence in smartphone technology.",
+        "price": 699.99,
+        "discountPercentage": 0.97,
+        "stock": 40,
+        "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Samsung%20Galaxy%20S10/thumbnail.png",
+        "status": "active",
+        "position": 13,
+        "deleted": false
+    },
+    {
+        "title": "Vivo S1",
+        "description": "The Vivo S1 is a stylish and mid-range smartphone offering a blend of design and performance. It features a vibrant display, capable camera system, and reliable functionality.",
+        "price": 249.99,
+        "discountPercentage": 4.25,
+        "stock": 13,
+        "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20S1/thumbnail.png",
+        "status": "active",
+        "position": 14,
+        "deleted": false
+    },
+    {
+        "title": "Vivo V9",
+        "description": "The Vivo V9 is a smartphone known for its sleek design and emphasis on capturing high-quality selfies. It features a notch display, dual-camera setup, and a modern design.",
+        "price": 299.99,
+        "discountPercentage": 14.57,
+        "stock": 19,
+        "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20V9/thumbnail.png",
+        "status": "inactive",
+        "position": 15,
+        "deleted": false
+    },
+    {
+        "title": "Vivo X21",
+        "description": "The Vivo X21 is a premium smartphone with a focus on cutting-edge technology. It features an in-display fingerprint sensor, a high-resolution display, and advanced camera capabilities.",
+        "price": 499.99,
+        "discountPercentage": 7.32,
+        "stock": 0,
+        "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20X21/thumbnail.png",
+        "status": "inactive",
+        "position": 16,
+        "deleted": false
+    }
+]
