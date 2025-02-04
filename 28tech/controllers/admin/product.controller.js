@@ -5,6 +5,7 @@ const searchHelper = require("../../helpers/search.js");
 const paginationHelper = require("../../helpers/pagination.js");
 
 module.exports.product = async (req, res) => {
+    // filter status
     const filterStatus = filterStatusHelper(req.query);
     let find = {
         deleted: false,
@@ -16,6 +17,8 @@ module.exports.product = async (req, res) => {
     if (objectSearch.regex) {
         find.title = objectSearch.regex;
     }
+    // end filter status
+
     // config pagination
 
     const countProdcuts = await Product.countDocuments(find);
@@ -25,6 +28,9 @@ module.exports.product = async (req, res) => {
         limitItems: 4,
     };
     paginationHelper(req.query, objectPagination,countProdcuts);
+
+    // end config pagination
+
 
     objectPagination.skip =
         (objectPagination.currentPage - 1) * objectPagination.limitItems;
