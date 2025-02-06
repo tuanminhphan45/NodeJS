@@ -82,6 +82,14 @@ if (formChangeMulti) {
         );
 
         const typeChange = e.target.element.type.value
+        if(typeChange == "delete") {
+            const isConfirm = confirm("Ban co chac muon xua nhung san pham nay?");
+            if(!isConfirm) {
+                return;
+            }
+            
+        }
+
         if (inputsChecked.length > 0) {
             let ids = [];
 
