@@ -16,7 +16,7 @@ block main
     .card.mb-3
         .card-header Bộ lọc và Tìm kiếm
             .card-body
-                form(action=`${prefixAdmin}/product/change-multi?_method=PATCH` method="POST" id="form-change-multi")
+                form(action=`${prefixAdmin}/product/change-multi?_method=PATCH` method="POST" id="form-change-multi" form-change-multi)
                     .d-flex.align-items-start
                         .form-group
                             select(name="type" class="form-control")

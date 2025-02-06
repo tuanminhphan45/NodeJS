@@ -57,20 +57,21 @@ module.exports.changeStatus = async (req, res) => {
 module.exports.changeMulti = async (req, res) => {
     const type = req.body.type;
     const ids = req.body.ids.split(",");
-    // switch (type) {
-    //     case "active":
-    //         await Product.updateMany(
-    //             { _id: { $in: ids } },
-    //             { status: "active" }
-    //         );
-    //         break;
-    //     case "inactive":
-    //         await Product.updateMany(
-    //             { _id: { $in: ids } },
-    //             { status: "inactive" }
-    //         );
-    //     default:
-    //         break;
-    // }
+    console.log(ids);
+    console.log(type);
+    switch (type) {
+        case "active":
+            await Product.updateMany(
+                { _id: { $in: ids } },
+                { status: "active" }
+            );
+            break;
+        case "inactive":
+            await Product.updateMany(
+                { _id: { $in: ids } },
+                { status: "inactive" }
+            );
+            break;
+    }
     res.redirect("back");
 };

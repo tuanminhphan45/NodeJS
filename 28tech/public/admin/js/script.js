@@ -75,6 +75,7 @@ if (checkboxMulti) {
 const formChangeMulti = document.querySelector("[form-change-multi]");
 if (formChangeMulti) {
     formChangeMulti.addEventListener("submit", (e) => {
+        console.log("ok");
         e.preventDefault();
 
         const checkboxMulti = document.querySelector("[checkbox-multi]");
@@ -95,7 +96,7 @@ if (formChangeMulti) {
             console.log(ids.join(", "));
             inputIds.value = ids.join(", ");
             console.log(ids);
-            // formChangeMulti.submit();
+            formChangeMulti.submit();
         } else {
             alert("Vui lòng chọn ít nhất một bản ghi!");
         }
