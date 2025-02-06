@@ -75,14 +75,13 @@ if (checkboxMulti) {
 const formChangeMulti = document.querySelector("[form-change-multi]");
 if (formChangeMulti) {
     formChangeMulti.addEventListener("submit", (e) => {
-        console.log("ok");
         e.preventDefault();
-
         const checkboxMulti = document.querySelector("[checkbox-multi]");
         const inputsChecked = checkboxMulti.querySelectorAll(
             "input[name='id']:checked"
         );
 
+        const typeChange = e.target.element.type.value
         if (inputsChecked.length > 0) {
             let ids = [];
 
@@ -92,10 +91,7 @@ if (formChangeMulti) {
                 const id = input.value;
                 ids.push(id);
             });
-
-            console.log(ids.join(", "));
             inputIds.value = ids.join(", ");
-            console.log(ids);
             formChangeMulti.submit();
         } else {
             alert("Vui lòng chọn ít nhất một bản ghi!");
