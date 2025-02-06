@@ -34,6 +34,7 @@ module.exports.product = async (req, res) => {
     objectPagination.skip =
         (objectPagination.currentPage - 1) * objectPagination.limitItems;
     const products = await Product.find(find)
+        .sort({ position: "desc" })
         .limit(objectPagination.limitItems)
         .skip(objectPagination.skip);
     res.render("admin/pages/product/index", {
@@ -50,6 +51,8 @@ module.exports.changeStatus = async (req, res) => {
     const status = req.params.status;
     const id = req.params.id;
     await Product.updateOne({ _id: id }, { status: status });
+
+    req.flash("success", "Cap nhat trang thai thanh cong");
     res.redirect("back");
 };
 
@@ -65,18 +68,38 @@ module.exports.changeMulti = async (req, res) => {
                 { _id: { $in: ids } },
                 { status: "active" }
             );
+            req.flash(
+                "success",
+                `Cap nhat trang thai ${ids.length} san pham thanh cong`
+            );
             break;
         case "inactive":
             await Product.updateMany(
                 { _id: { $in: ids } },
                 { status: "inactive" }
             );
+            req.flash("success", "Cap nhat trang thai thanh cong");
             break;
         case "delete-all":
             await Product.updateMany(
                 { _id: { $in: ids } },
                 { deleted: true, deleteAt: new Date() }
             );
+            req.flash("success", "Cap nhat trang thai thanh cong");
+            break;
+        case "change-postion":
+            for (const id of ids) {
+                const [idProduct, position] = id.split("-");
+                position = parseInt(position);
+                await Product.updateOne(
+                    { _id: idProduct },
+                    { position: position }
+                );
+            }
+            req.flash("success", "Cap nhat trang thai thanh cong");
+            break;
+        default:
+            break;
     }
     res.redirect("back");
 };
@@ -85,8 +108,9 @@ module.exports.changeMulti = async (req, res) => {
 module.exports.delete = async (req, res) => {
     const id = req.params.id;
     console.log(id);
-    await Product.updateOne({ _id: id }, { deleted: true, 
-        deleteAt: new Date()
-    });
+    await Product.updateOne(
+        { _id: id },
+        { deleted: true, deleteAt: new Date() }
+    );
     res.redirect("back");
 };

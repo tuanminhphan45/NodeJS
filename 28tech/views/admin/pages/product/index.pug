@@ -3,7 +3,10 @@ include ../../mixins/filter-status
 include ../../mixins/search
 include ../../mixins/pagination
 include ../../mixins/form-change-multi
+include ../../mixins/alert
 block main 
+    +alert-sucess(5000)
+
     h1 Danh sach san pham 
 
     .card.mb-3
@@ -28,6 +31,7 @@ block main
                             th Hinh anh
                             th Tieu de 
                             th Gia 
+                            th Vi Tri
                             th Trang thai 
                             th Hanh Dong 
                     tbody
@@ -40,6 +44,8 @@ block main
                                     img(src=item.thumbnail, alt="Hinh anh san pham", width="100px", height="auto")
                                 td #{item.title}
                                 td #{item.price}$
+                                td 
+                                    input(type="number" value=item.position name="position" min="1" style="width: 70px")
                                 td 
                                     if(item.status == "active")
                                         a(href="javascript:;" class="badge bg-success"

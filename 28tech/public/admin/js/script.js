@@ -81,13 +81,14 @@ if (formChangeMulti) {
             "input[name='id']:checked"
         );
 
-        const typeChange = e.target.element.type.value
-        if(typeChange == "delete") {
-            const isConfirm = confirm("Ban co chac muon xua nhung san pham nay?");
-            if(!isConfirm) {
+        const typeChange = e.target.elements.type.value;
+        if (typeChange == "delete") {
+            const isConfirm = confirm(
+                "Ban co chac muon xua nhung san pham nay?"
+            );
+            if (!isConfirm) {
                 return;
             }
-            
         }
 
         if (inputsChecked.length > 0) {
@@ -97,7 +98,15 @@ if (formChangeMulti) {
 
             inputsChecked.forEach((input) => {
                 const id = input.value;
-                ids.push(id);
+
+                if (typeChange == "change-postion") {
+                    const position = input
+                        .closest("tr")
+                        .querySelector("input[name='position']").value;
+                    ids.push(`${id}-${position}`);
+                } else {
+                    ids.push(id);
+                }
             });
             inputIds.value = ids.join(", ");
             formChangeMulti.submit();
@@ -107,3 +116,19 @@ if (formChangeMulti) {
     });
 }
 // end form change multi
+
+// show alert
+const showAlert = document.querySelector("[show-alert]");
+if (showAlert) {
+    const time = parseInt(showAlert.getAttribute("data-time"));
+    const closeAlert = showAlert.querySelector("[close-alert]");
+
+    setTimeout(() => {
+        showAlert.classList.add("alert-hidden");
+    }, time);
+
+    closeAlert.addEventListener("click", () => {
+        showAlert.classList.add("alert-hidden");
+    });
+}
+// end show alert
