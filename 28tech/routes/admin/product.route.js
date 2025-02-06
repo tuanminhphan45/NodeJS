@@ -2,6 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 const conttroller = require("../../controllers/admin/product.controller");
+const { route } = require("./dashboard.route");
 router.get("/", conttroller.product);
-router.get("/change-status/inactive/123",conttroller.changeStatus)
+router.patch("/change-status/:status/:id", conttroller.changeStatus);
+router.patch("/change-multi", conttroller.changeMulti);
+
 module.exports = router;

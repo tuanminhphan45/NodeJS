@@ -1,8 +1,13 @@
 require("dotenv").config();
 
 const express = require("express");
+var methodOverride = require("method-override");
+var bodyParser = require("body-parser");
 const app = express();
 
+app.use(methodOverride("_method"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 const port = process.env.PORT || 3000;
 
 const mongoose = require("mongoose");
@@ -15,7 +20,6 @@ app.set("views", "./views");
 app.use(express.static("public"));
 
 app.locals.prefixAdmin = systemConfig.prefixAdmin;
-
 
 const clientRoutes = require("./routes/client/index.route");
 const adminRoutes = require("./routes/admin/index.route");
